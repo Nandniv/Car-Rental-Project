@@ -1,0 +1,12 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block Content %}
+
+<form method="POST">
+    {% csrf_token %}
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <button type="submit">Send OTP</button>
+</form>
+
+{%endblock%}
